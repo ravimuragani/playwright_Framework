@@ -1,8 +1,16 @@
 import { test, expect } from "./fixtures";
 
-test("SauceDemo end-to-end purchase flow", async ({ po, sauceData, page }) => {
+test.beforeEach(async ({ po, sauceData, page }) => {
   await po.getLoginPage().goTo();
   await po.getLoginPage().login(sauceData.username, sauceData.password);
+});
+
+test.afterEach(async ({ page }) => {
+  await page.context().clearCookies();
+  await page.close();
+});
+
+test("SauceDemo end-to-end purchase flow", async ({ po, sauceData, page }) => {
 
   const productName = sauceData.productName ?? (await po.getProductsPage().getFirstProductName());
   await po.getProductsPage().addToCartByName(productName);
