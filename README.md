@@ -93,16 +93,3 @@ npx playwright test tests/saucedemo_order.spec.ts --project=chrome -x
 npm run allureGen
 npm run allureOpen
 ```
-
-## Git / CI notes
-
-- For CI, install Node and the Playwright browsers, then run the tests. Use `TEST_DATA`/`TEST_DATA_INDEX` env vars to select datasets.
-
-## Troubleshooting
-
-- If a dataset produces UI errors (e.g., `problem_user` on SauceDemo), consider marking that dataset as expected-failing or removing it from the production dataset file.
-- Use `npx playwright show-report` to open the HTML test report and `npx playwright show-trace <trace.zip>` to debug traces.
-
----
-
-Created for upload to git; let me know if you want this expanded with CI workflow and badges.
