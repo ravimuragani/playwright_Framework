@@ -1,0 +1,30 @@
+{
+  "name": "playwrightproject",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "safari":"npx  playwright test tests --project=safari",
+    "chrome":"npx  playwright test tests --project=chrome",
+    "firefox":"npx  playwright test tests --project=firefox",
+    "device-samsung":"npx  playwright test tests --project=device-samsung",
+    "device-iphone":"npx  playwright test tests --project=device-iphone",
+    "smoke":"npx  playwright test --grep @smoke",
+    "regression":"npx  playwright test --grep @regression",
+    "allureGen":"npx allure generate allure-results -o allure-report --clean",
+    "allureOpen":"npx allure open allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2",
+    "allure-commandline": "^2.43.0",
+    "allure-playwright": "^3.10.2",
+    "exceljs": "^4.4.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.23.5",
+    "typescript": "^7.0.2"
+  }
+}

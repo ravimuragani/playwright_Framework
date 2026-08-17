@@ -1,0 +1,21 @@
+[
+  {
+    "name": "standard",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "firstName": "John",
+    "lastName": "Doe",
+    "postalCode": "12345",
+    "productName": "Sauce Labs Backpack"
+  },
+    {
+    "name": "standard",
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "firstName": "John",
+    "lastName": "Doe",
+    "postalCode": "12345",
+    "productName": "Sauce Labs Bolt T-Shirt"
+  }
+
+]
